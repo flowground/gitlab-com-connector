@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "recipients": {
+                    "description": "Recipients/channels separated by whitespaces",
+                    "type": "string"
+                },
+                "default_irc_uri": {
+                    "description": "Default: irc://irc.network.net:6697",
+                    "type": "string"
+                },
+                "server_host": {
+                    "description": "Server host. Default localhost",
+                    "type": "string"
+                },
+                "server_port": {
+                    "description": "Server port. Default 6659",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "colorize_messages": {
+                    "description": "Colorize messages",
+                    "type": "boolean"
+                },
+                "push_events": {
+                    "description": "Event will be triggered by a push to the repository",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "recipients"
+            ]
+        }
+    }
+}

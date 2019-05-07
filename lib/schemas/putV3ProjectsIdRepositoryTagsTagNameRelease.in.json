@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "tag_name": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "description": "Release notes with markdown support",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description"
+            ]
+        }
+    }
+}

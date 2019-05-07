@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "scope": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "pending",
+                "running",
+                "failed",
+                "success",
+                "canceled"
+            ]
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

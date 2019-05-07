@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "namespace": {
+                    "description": "The Kubernetes namespace to use",
+                    "type": "string"
+                },
+                "api_url": {
+                    "description": "The URL to the Kubernetes cluster API, e.g., https://kubernetes.example.com",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "The service token to authenticate against the Kubernetes cluster with",
+                    "type": "string"
+                },
+                "ca_pem": {
+                    "description": "A custom certificate authority bundle to verify the Kubernetes cluster with (PEM format)",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "namespace"
+            ]
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the label to be updated",
+                    "type": "string"
+                },
+                "new_name": {
+                    "description": "The new name of the label",
+                    "type": "string"
+                },
+                "color": {
+                    "description": "The new color of the label given in 6-digit hex notation with leading '#' sign (e.g. #FFAABB)",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The new description of label",
+                    "type": "string"
+                },
+                "priority": {
+                    "description": "The priority of the label",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        }
+    }
+}

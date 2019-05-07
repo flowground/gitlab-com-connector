@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "description": "The new deploy key",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The name of the deploy key",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "key"
+            ]
+        }
+    }
+}

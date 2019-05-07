@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the environment to be created",
+                    "type": "string"
+                },
+                "external_url": {
+                    "description": "URL on which this deployment is viewable",
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        }
+    }
+}

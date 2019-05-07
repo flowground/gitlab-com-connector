@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "issue_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "to_project_id": {
+                    "description": "The ID of the new project",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "to_project_id"
+            ]
+        }
+    }
+}

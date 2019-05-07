@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "description": "The title of an issue",
+                    "type": "string"
+                },
+                "created_at": {
+                    "description": "Date time when the issue was created. Available only for admins and project owners.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "merge_request_for_resolving_discussions": {
+                    "description": "The IID of a merge request for which to resolve discussions",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "description": {
+                    "description": "The description of an issue",
+                    "type": "string"
+                },
+                "assignee_id": {
+                    "description": "The ID of a user to assign issue",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "milestone_id": {
+                    "description": "The ID of a milestone to assign issue",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "labels": {
+                    "description": "Comma-separated list of label names",
+                    "type": "string"
+                },
+                "due_date": {
+                    "description": "Date time string in the format YEAR-MONTH-DAY",
+                    "type": "string"
+                },
+                "confidential": {
+                    "description": "Boolean parameter if the issue should be confidential",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "title"
+            ]
+        }
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "sha": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "The state of the status",
+                    "type": "string",
+                    "enum": [
+                        "pending",
+                        "running",
+                        "success",
+                        "failed",
+                        "canceled"
+                    ]
+                },
+                "ref": {
+                    "description": "The ref",
+                    "type": "string"
+                },
+                "target_url": {
+                    "description": "The target URL to associate with this status",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A short description of the status",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A string label to differentiate this status from the status of other systems. Default: \"default\"",
+                    "type": "string"
+                },
+                "context": {
+                    "description": "A string label to differentiate this status from the status of other systems. Default: \"default\"",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "state"
+            ]
+        }
+    }
+}

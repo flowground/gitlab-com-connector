@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "level": {
+                    "description": "The global notification level",
+                    "type": "string"
+                },
+                "notification_email": {
+                    "description": "The email address to send notifications",
+                    "type": "string"
+                },
+                "new_note": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "new_issue": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "reopen_issue": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "close_issue": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "reassign_issue": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "new_merge_request": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "reopen_merge_request": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "close_merge_request": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "reassign_merge_request": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "merge_merge_request": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "failed_pipeline": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                },
+                "success_pipeline": {
+                    "description": "Enable/disable this notification",
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

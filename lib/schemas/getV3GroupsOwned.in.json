@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "statistics": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

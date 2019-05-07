@@ -1,0 +1,92 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the project",
+                    "type": "string"
+                },
+                "default_branch": {
+                    "description": "The default branch of the project",
+                    "type": "string"
+                },
+                "path": {
+                    "description": "The path of the repository",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The description of the project",
+                    "type": "string"
+                },
+                "issues_enabled": {
+                    "description": "Flag indication if the issue tracker is enabled",
+                    "type": "boolean"
+                },
+                "merge_requests_enabled": {
+                    "description": "Flag indication if merge requests are enabled",
+                    "type": "boolean"
+                },
+                "wiki_enabled": {
+                    "description": "Flag indication if the wiki is enabled",
+                    "type": "boolean"
+                },
+                "builds_enabled": {
+                    "description": "Flag indication if builds are enabled",
+                    "type": "boolean"
+                },
+                "snippets_enabled": {
+                    "description": "Flag indication if snippets are enabled",
+                    "type": "boolean"
+                },
+                "shared_runners_enabled": {
+                    "description": "Flag indication if shared runners are enabled for that project",
+                    "type": "boolean"
+                },
+                "container_registry_enabled": {
+                    "description": "Flag indication if the container registry is enabled for that project",
+                    "type": "boolean"
+                },
+                "lfs_enabled": {
+                    "description": "Flag indication if Git LFS is enabled for that project",
+                    "type": "boolean"
+                },
+                "public": {
+                    "description": "Create a public project. The same as visibility_level = 20.",
+                    "type": "boolean"
+                },
+                "visibility_level": {
+                    "description": "Create a public project. The same as visibility_level = 20.",
+                    "type": "integer",
+                    "format": "int32",
+                    "enum": [
+                        0,
+                        10,
+                        20
+                    ]
+                },
+                "public_builds": {
+                    "description": "Perform public builds",
+                    "type": "boolean"
+                },
+                "request_access_enabled": {
+                    "description": "Allow users to request member access",
+                    "type": "boolean"
+                },
+                "only_allow_merge_if_build_succeeds": {
+                    "description": "Only allow to merge if builds succeed",
+                    "type": "boolean"
+                },
+                "only_allow_merge_if_all_discussions_are_resolved": {
+                    "description": "Only allow to merge if all discussions are resolved",
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

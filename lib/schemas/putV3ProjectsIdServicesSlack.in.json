@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "webhook": {
+                    "description": "The Slack webhook. e.g. https://hooks.slack.com/services/...",
+                    "type": "string"
+                },
+                "new_issue_url": {
+                    "description": "The user name",
+                    "type": "string"
+                },
+                "channel": {
+                    "description": "The channel name",
+                    "type": "string"
+                },
+                "push_events": {
+                    "description": "Event will be triggered by a push to the repository",
+                    "type": "string"
+                },
+                "issue_events": {
+                    "description": "Event will be triggered when an issue is created/updated/closed",
+                    "type": "string"
+                },
+                "confidential_issue_events": {
+                    "description": "Event will be triggered when a confidential issue is created/updated/closed",
+                    "type": "string"
+                },
+                "merge_request_events": {
+                    "description": "Event will be triggered when a merge request is created/updated/merged",
+                    "type": "string"
+                },
+                "note_events": {
+                    "description": "Event will be triggered when someone adds a comment",
+                    "type": "string"
+                },
+                "tag_push_events": {
+                    "description": "Event will be triggered when a new tag is pushed to the repository",
+                    "type": "string"
+                },
+                "build_events": {
+                    "description": "Event will be triggered when a build status changes",
+                    "type": "string"
+                },
+                "pipeline_events": {
+                    "type": "string"
+                },
+                "wiki_page_events": {
+                    "description": "Event will be triggered when a wiki page is created/updated",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "webhook"
+            ]
+        }
+    }
+}

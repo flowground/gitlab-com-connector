@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "username": {
+            "required": false,
+            "type": "string"
+        },
+        "search": {
+            "required": false,
+            "type": "string"
+        },
+        "active": {
+            "required": false,
+            "type": "boolean"
+        },
+        "external": {
+            "required": false,
+            "type": "boolean"
+        },
+        "blocked": {
+            "required": false,
+            "type": "boolean"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

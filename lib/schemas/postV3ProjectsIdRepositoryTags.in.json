@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "tag_name": {
+                    "description": "The name of the tag",
+                    "type": "string"
+                },
+                "ref": {
+                    "description": "The commit sha or branch name",
+                    "type": "string"
+                },
+                "message": {
+                    "description": "Specifying a message creates an annotated tag",
+                    "type": "string"
+                },
+                "release_description": {
+                    "description": "Specifying release notes stored in the GitLab database",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "tag_name"
+            ]
+        }
+    }
+}

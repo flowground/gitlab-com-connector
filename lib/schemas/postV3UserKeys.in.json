@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "description": "The new SSH key",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The title of the new SSH key",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "key"
+            ]
+        }
+    }
+}

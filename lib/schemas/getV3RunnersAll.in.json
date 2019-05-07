@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "scope": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "active",
+                "paused",
+                "online",
+                "specific",
+                "shared"
+            ]
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

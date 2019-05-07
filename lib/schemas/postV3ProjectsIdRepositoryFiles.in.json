@@ -1,0 +1,48 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "file_path": {
+                    "description": "The path to new file. Ex. lib/class.rb",
+                    "type": "string"
+                },
+                "branch_name": {
+                    "description": "The name of branch",
+                    "type": "string"
+                },
+                "commit_message": {
+                    "description": "Commit Message",
+                    "type": "string"
+                },
+                "author_email": {
+                    "description": "The email of the author",
+                    "type": "string"
+                },
+                "author_name": {
+                    "description": "The name of the author",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "File content",
+                    "type": "string"
+                },
+                "encoding": {
+                    "description": "File encoding",
+                    "type": "string",
+                    "enum": [
+                        "base64"
+                    ]
+                }
+            },
+            "required": [
+                "file_path"
+            ]
+        }
+    }
+}

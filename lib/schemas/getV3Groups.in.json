@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+        "statistics": {
+            "required": false,
+            "type": "boolean"
+        },
+        "all_available": {
+            "required": false,
+            "type": "boolean"
+        },
+        "search": {
+            "required": false,
+            "type": "string"
+        },
+        "order_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "name",
+                "path"
+            ],
+            "default": "name"
+        },
+        "sort": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "asc",
+                "desc"
+            ],
+            "default": "asc"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "skip_groups": {
+                    "description": "Array of group ids to exclude from list",
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}

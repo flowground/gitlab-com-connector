@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "runner_id": {
+                    "description": "The ID of the runner",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "runner_id"
+            ]
+        }
+    }
+}

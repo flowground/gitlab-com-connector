@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "ref_name": {
+            "required": false,
+            "type": "string"
+        },
+        "path": {
+            "required": false,
+            "type": "string"
+        },
+        "recursive": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "milestone_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "description": "The title of the milestone",
+                    "type": "string"
+                },
+                "state_event": {
+                    "description": "The state event of the milestone ",
+                    "type": "string",
+                    "enum": [
+                        "close",
+                        "activate"
+                    ]
+                },
+                "description": {
+                    "description": "The description of the milestone",
+                    "type": "string"
+                },
+                "due_date": {
+                    "description": "The due date of the milestone. The ISO 8601 date format (%Y-%m-%d)",
+                    "type": "string"
+                },
+                "start_date": {
+                    "description": "The start date of the milestone. The ISO 8601 date format (%Y-%m-%d)",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

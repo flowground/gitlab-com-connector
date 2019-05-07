@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "query": {
+            "required": true,
+            "type": "string"
+        },
+        "order_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "id",
+                "name",
+                "path",
+                "created_at",
+                "updated_at",
+                "last_activity_at"
+            ],
+            "default": "created_at"
+        },
+        "sort": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "asc",
+                "desc"
+            ],
+            "default": "desc"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

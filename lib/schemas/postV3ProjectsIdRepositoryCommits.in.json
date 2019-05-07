@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "branch_name": {
+                    "description": "The name of branch",
+                    "type": "string"
+                },
+                "commit_message": {
+                    "description": "Commit message",
+                    "type": "string"
+                },
+                "actions": {
+                    "description": "Actions to perform in commit",
+                    "type": "array",
+                    "items": {
+                        "x-type": "object"
+                    }
+                },
+                "author_email": {
+                    "description": "Author email for commit",
+                    "type": "string"
+                },
+                "author_name": {
+                    "description": "Author name for commit",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "branch_name"
+            ]
+        }
+    }
+}

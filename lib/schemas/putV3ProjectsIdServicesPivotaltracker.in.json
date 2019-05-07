@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "description": "The Pivotaltracker token",
+                    "type": "string"
+                },
+                "restrict_to_branch": {
+                    "description": "Comma-separated list of branches which will be automatically inspected. Leave blank to include all branches.",
+                    "type": "string"
+                },
+                "push_events": {
+                    "description": "Event will be triggered by a push to the repository",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "token"
+            ]
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "description": "The title of the merge request",
+                    "type": "string"
+                },
+                "source_branch": {
+                    "description": "The source branch",
+                    "type": "string"
+                },
+                "target_branch": {
+                    "description": "The target branch",
+                    "type": "string"
+                },
+                "target_project_id": {
+                    "description": "The target project of the merge request defaults to the :id of the project",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "description": {
+                    "description": "The description of the merge request",
+                    "type": "string"
+                },
+                "assignee_id": {
+                    "description": "The ID of a user to assign the merge request",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "milestone_id": {
+                    "description": "The ID of a milestone to assign the merge request",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "labels": {
+                    "description": "Comma-separated list of label names",
+                    "type": "string"
+                },
+                "remove_source_branch": {
+                    "description": "Remove source branch when merging",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "title"
+            ]
+        }
+    }
+}

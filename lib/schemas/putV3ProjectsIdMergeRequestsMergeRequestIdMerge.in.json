@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "merge_request_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "merge_commit_message": {
+                    "description": "Custom merge commit message",
+                    "type": "string"
+                },
+                "should_remove_source_branch": {
+                    "description": "When true, the source branch will be deleted if possible",
+                    "type": "boolean"
+                },
+                "merge_when_build_succeeds": {
+                    "description": "When true, this merge request will be merged when the pipeline succeeds",
+                    "type": "boolean"
+                },
+                "sha": {
+                    "description": "When present, must have the HEAD SHA of the source branch",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

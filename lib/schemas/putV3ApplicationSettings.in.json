@@ -1,0 +1,332 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "default_branch_protection": {
+                    "description": "Determine if developers can push to master",
+                    "type": "integer",
+                    "format": "int32",
+                    "enum": [
+                        0,
+                        1,
+                        2
+                    ]
+                },
+                "default_project_visibility": {
+                    "description": "The default project visibility",
+                    "type": "integer",
+                    "format": "int32",
+                    "enum": [
+                        0,
+                        10,
+                        20
+                    ]
+                },
+                "default_snippet_visibility": {
+                    "description": "The default snippet visibility",
+                    "type": "integer",
+                    "format": "int32",
+                    "enum": [
+                        0,
+                        10,
+                        20
+                    ]
+                },
+                "default_group_visibility": {
+                    "description": "The default group visibility",
+                    "type": "integer",
+                    "format": "int32",
+                    "enum": [
+                        0,
+                        10,
+                        20
+                    ]
+                },
+                "restricted_visibility_levels": {
+                    "description": "Selected levels cannot be used by non-admin users for projects or snippets. If the public level is restricted, user profiles are only visible to logged in users.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "import_sources": {
+                    "description": "Enabled sources for code import during project creation. OmniAuth must be configured for GitHub, Bitbucket, and GitLab.com",
+                    "type": "array",
+                    "enum": [
+                        "github",
+                        "bitbucket",
+                        "gitlab",
+                        "google_code",
+                        "fogbugz",
+                        "git",
+                        "gitlab_project"
+                    ],
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "disabled_oauth_sign_in_sources": {
+                    "description": "Disable certain OAuth sign-in sources",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "enabled_git_access_protocol": {
+                    "description": "Allow only the selected protocols to be used for Git access.",
+                    "type": "string",
+                    "enum": [
+                        "ssh",
+                        "http",
+                        "nil"
+                    ]
+                },
+                "gravatar_enabled": {
+                    "description": "Flag indicating if the Gravatar service is enabled",
+                    "type": "boolean"
+                },
+                "default_projects_limit": {
+                    "description": "The maximum number of personal projects",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "max_attachment_size": {
+                    "description": "Maximum attachment size in MB",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "session_expire_delay": {
+                    "description": "Session duration in minutes. GitLab restart is required to apply changes.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "user_oauth_applications": {
+                    "description": "Allow users to register any application to use GitLab as an OAuth provider",
+                    "type": "boolean"
+                },
+                "user_default_external": {
+                    "description": "Newly registered users will by default be external",
+                    "type": "boolean"
+                },
+                "signup_enabled": {
+                    "description": "Flag indicating if sign up is enabled",
+                    "type": "boolean"
+                },
+                "send_user_confirmation_email": {
+                    "description": "Send confirmation email on sign-up",
+                    "type": "boolean"
+                },
+                "domain_whitelist": {
+                    "description": "ONLY users with e-mail addresses that match these domain(s) will be able to sign-up. Wildcards allowed. Use separate lines for multiple entries. Ex: domain.com, *.domain.com",
+                    "type": "string"
+                },
+                "domain_blacklist_enabled": {
+                    "description": "Enable domain blacklist for sign ups",
+                    "type": "boolean"
+                },
+                "domain_blacklist": {
+                    "description": "Users with e-mail addresses that match these domain(s) will NOT be able to sign-up. Wildcards allowed. Use separate lines for multiple entries. Ex: domain.com, *.domain.com",
+                    "type": "string"
+                },
+                "after_sign_up_text": {
+                    "description": "Text shown after sign up",
+                    "type": "string"
+                },
+                "signin_enabled": {
+                    "description": "Flag indicating if sign in is enabled",
+                    "type": "boolean"
+                },
+                "require_two_factor_authentication": {
+                    "description": "Require all users to setup Two-factor authentication",
+                    "type": "boolean"
+                },
+                "two_factor_grace_period": {
+                    "description": "Amount of time (in hours) that users are allowed to skip forced configuration of two-factor authentication",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "home_page_url": {
+                    "description": "We will redirect non-logged in users to this page",
+                    "type": "string"
+                },
+                "after_sign_out_path": {
+                    "description": "We will redirect users to this page after they sign out",
+                    "type": "string"
+                },
+                "sign_in_text": {
+                    "description": "The sign in text of the GitLab application",
+                    "type": "string"
+                },
+                "help_page_text": {
+                    "description": "Custom text displayed on the help page",
+                    "type": "string"
+                },
+                "shared_runners_enabled": {
+                    "description": "Enable shared runners for new projects",
+                    "type": "boolean"
+                },
+                "shared_runners_text": {
+                    "description": "Shared runners text ",
+                    "type": "string"
+                },
+                "max_artifacts_size": {
+                    "description": "Set the maximum file size each build's artifacts can have",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "container_registry_token_expire_delay": {
+                    "description": "Authorization token duration (minutes)",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "metrics_enabled": {
+                    "description": "Enable the InfluxDB metrics",
+                    "type": "boolean"
+                },
+                "metrics_host": {
+                    "description": "The InfluxDB host",
+                    "type": "string"
+                },
+                "metrics_port": {
+                    "description": "The UDP port to use for connecting to InfluxDB",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "metrics_pool_size": {
+                    "description": "The amount of InfluxDB connections to open",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "metrics_timeout": {
+                    "description": "The amount of seconds after which an InfluxDB connection will time out",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "metrics_method_call_threshold": {
+                    "description": "A method call is only tracked when it takes longer to complete than the given amount of milliseconds.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "metrics_sample_interval": {
+                    "description": "The sampling interval in seconds",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "metrics_packet_size": {
+                    "description": "The amount of points to store in a single UDP packet",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "sidekiq_throttling_enabled": {
+                    "description": "Enable Sidekiq Job Throttling",
+                    "type": "boolean"
+                },
+                "sidekiq_throttling_queus": {
+                    "description": "Choose which queues you wish to throttle",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sidekiq_throttling_factor": {
+                    "description": "The factor by which the queues should be throttled. A value between 0.0 and 1.0, exclusive.",
+                    "type": "number",
+                    "format": "float"
+                },
+                "recaptcha_enabled": {
+                    "description": "Helps prevent bots from creating accounts",
+                    "type": "boolean"
+                },
+                "recaptcha_site_key": {
+                    "description": "Generate site key at http://www.google.com/recaptcha",
+                    "type": "string"
+                },
+                "recaptcha_private_key": {
+                    "description": "Generate private key at http://www.google.com/recaptcha",
+                    "type": "string"
+                },
+                "akismet_enabled": {
+                    "description": "Helps prevent bots from creating issues",
+                    "type": "boolean"
+                },
+                "akismet_api_key": {
+                    "description": "Generate API key at http://www.akismet.com",
+                    "type": "string"
+                },
+                "admin_notification_email": {
+                    "description": "Abuse reports will be sent to this address if it is set. Abuse reports are always available in the admin area.",
+                    "type": "string"
+                },
+                "sentry_enabled": {
+                    "description": "Sentry is an error reporting and logging tool which is currently not shipped with GitLab, get it here: https://getsentry.com",
+                    "type": "boolean"
+                },
+                "sentry_dsn": {
+                    "description": "Sentry Data Source Name",
+                    "type": "string"
+                },
+                "repository_storage": {
+                    "description": "Storage paths for new projects",
+                    "type": "string"
+                },
+                "repository_checks_enabled": {
+                    "description": "GitLab will periodically run 'git fsck' in all project and wiki repositories to look for silent disk corruption issues.",
+                    "type": "boolean"
+                },
+                "koding_enabled": {
+                    "description": "Enable Koding",
+                    "type": "boolean"
+                },
+                "koding_url": {
+                    "description": "The Koding team URL",
+                    "type": "string"
+                },
+                "plantuml_enabled": {
+                    "description": "Enable PlantUML",
+                    "type": "boolean"
+                },
+                "plantuml_url": {
+                    "description": "The PlantUML server URL",
+                    "type": "string"
+                },
+                "version_check_enabled": {
+                    "description": "Let GitLab inform you when an update is available.",
+                    "type": "boolean"
+                },
+                "email_author_in_body": {
+                    "description": "Some email servers do not support overriding the email sender name. Enable this option to include the name of the author of the issue, merge request or comment in the email body instead.",
+                    "type": "boolean"
+                },
+                "html_emails_enabled": {
+                    "description": "By default GitLab sends emails in HTML and plain text formats so mail clients can choose what format to use. Disable this option if you only want to send emails in plain text format.",
+                    "type": "boolean"
+                },
+                "housekeeping_enabled": {
+                    "description": "Enable automatic repository housekeeping (git repack, git gc)",
+                    "type": "boolean"
+                },
+                "housekeeping_bitmaps_enabled": {
+                    "description": "Creating pack file bitmaps makes housekeeping take a little longer but bitmaps should accelerate 'git clone' performance.",
+                    "type": "boolean"
+                },
+                "housekeeping_incremental_repack_period": {
+                    "description": "Number of Git pushes after which an incremental 'git repack' is run.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "housekeeping_full_repack_period": {
+                    "description": "Number of Git pushes after which a full 'git repack' is run.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "housekeeping_gc_period": {
+                    "description": "Number of Git pushes after which 'git gc' is run.",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        }
+    }
+}

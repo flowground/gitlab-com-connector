@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "group_id": {
+                    "description": "The ID of a group",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "group_access": {
+                    "description": "The group access level",
+                    "type": "integer",
+                    "format": "int32",
+                    "enum": [
+                        10,
+                        20,
+                        30,
+                        40
+                    ]
+                },
+                "expires_at": {
+                    "description": "Share expiration date",
+                    "type": "string",
+                    "format": "date"
+                }
+            },
+            "required": [
+                "group_id"
+            ]
+        }
+    }
+}

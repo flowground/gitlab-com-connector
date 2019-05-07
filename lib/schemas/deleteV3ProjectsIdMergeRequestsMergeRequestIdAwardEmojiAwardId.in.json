@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "award_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "merge_request_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

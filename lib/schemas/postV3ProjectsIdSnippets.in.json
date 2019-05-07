@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "description": "The title of the snippet",
+                    "type": "string"
+                },
+                "file_name": {
+                    "description": "The file name of the snippet",
+                    "type": "string"
+                },
+                "code": {
+                    "description": "The content of the snippet",
+                    "type": "string"
+                },
+                "visibility_level": {
+                    "description": "The visibility level of the snippet",
+                    "type": "integer",
+                    "format": "int32",
+                    "enum": [
+                        0,
+                        10,
+                        20
+                    ]
+                }
+            },
+            "required": [
+                "title"
+            ]
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "file_path": {
+            "required": true,
+            "type": "string"
+        },
+        "branch_name": {
+            "required": true,
+            "type": "string"
+        },
+        "commit_message": {
+            "required": true,
+            "type": "string"
+        },
+        "author_email": {
+            "required": false,
+            "type": "string"
+        },
+        "author_name": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

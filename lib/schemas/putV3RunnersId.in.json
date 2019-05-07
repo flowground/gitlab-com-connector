@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "description": "The description of the runner",
+                    "type": "string"
+                },
+                "active": {
+                    "description": "The state of a runner",
+                    "type": "boolean"
+                },
+                "tag_list": {
+                    "description": "The list of tags for a runner",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "run_untagged": {
+                    "description": "Flag indicating the runner can execute untagged jobs",
+                    "type": "boolean"
+                },
+                "locked": {
+                    "description": "Flag indicating the runner is locked",
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

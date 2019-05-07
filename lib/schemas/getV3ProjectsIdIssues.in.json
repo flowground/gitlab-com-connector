@@ -1,0 +1,60 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "state": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "opened",
+                "closed",
+                "all"
+            ],
+            "default": "all"
+        },
+        "iid": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "labels": {
+            "required": false,
+            "type": "string"
+        },
+        "milestone": {
+            "required": false,
+            "type": "string"
+        },
+        "order_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "created_at",
+                "updated_at"
+            ],
+            "default": "created_at"
+        },
+        "sort": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "asc",
+                "desc"
+            ],
+            "default": "desc"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

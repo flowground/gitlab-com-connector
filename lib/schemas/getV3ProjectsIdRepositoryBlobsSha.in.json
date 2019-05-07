@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "sha": {
+            "required": true,
+            "type": "string"
+        },
+        "filepath": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

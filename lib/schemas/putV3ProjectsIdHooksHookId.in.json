@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "hook_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "description": "The URL to send the request to",
+                    "type": "string"
+                },
+                "push_events": {
+                    "description": "Trigger hook on push events",
+                    "type": "boolean"
+                },
+                "issues_events": {
+                    "description": "Trigger hook on issues events",
+                    "type": "boolean"
+                },
+                "merge_requests_events": {
+                    "description": "Trigger hook on merge request events",
+                    "type": "boolean"
+                },
+                "tag_push_events": {
+                    "description": "Trigger hook on tag push events",
+                    "type": "boolean"
+                },
+                "note_events": {
+                    "description": "Trigger hook on note(comment) events",
+                    "type": "boolean"
+                },
+                "build_events": {
+                    "description": "Trigger hook on build events",
+                    "type": "boolean"
+                },
+                "pipeline_events": {
+                    "description": "Trigger hook on pipeline events",
+                    "type": "boolean"
+                },
+                "wiki_page_events": {
+                    "description": "Trigger hook on wiki events",
+                    "type": "boolean"
+                },
+                "enable_ssl_verification": {
+                    "description": "Do SSL verification when triggering the hook",
+                    "type": "boolean"
+                },
+                "token": {
+                    "description": "Secret token to validate received payloads; this will not be returned in the response",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "url"
+            ]
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "noteable_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "body": {
+                    "description": "The content of a note",
+                    "type": "string"
+                },
+                "created_at": {
+                    "description": "The creation date of the note",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "body"
+            ]
+        }
+    }
+}

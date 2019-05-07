@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "service_slug": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "asana",
+                "assembla",
+                "bamboo",
+                "bugzilla",
+                "buildkite",
+                "builds-email",
+                "campfire",
+                "custom-issue-tracker",
+                "drone-ci",
+                "emails-on-push",
+                "external-wiki",
+                "flowdock",
+                "gemnasium",
+                "hipchat",
+                "irker",
+                "jira",
+                "kubernetes",
+                "mattermost-slash-commands",
+                "slack-slash-commands",
+                "pipelines-email",
+                "pivotaltracker",
+                "pushover",
+                "redmine",
+                "slack",
+                "mattermost",
+                "teamcity"
+            ]
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

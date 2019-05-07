@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "description": "The email of the user",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email"
+            ]
+        }
+    }
+}

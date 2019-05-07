@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "sha": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "branch": {
+                    "description": "The name of the branch",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "branch"
+            ]
+        }
+    }
+}

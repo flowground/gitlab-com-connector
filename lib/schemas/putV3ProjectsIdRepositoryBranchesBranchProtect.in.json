@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "branch": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "developers_can_push": {
+                    "description": "Flag if developers can push to that branch",
+                    "type": "boolean"
+                },
+                "developers_can_merge": {
+                    "description": "Flag if developers can merge to that branch",
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

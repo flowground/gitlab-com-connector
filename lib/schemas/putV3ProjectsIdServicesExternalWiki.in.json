@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "external_wiki_url": {
+                    "description": "The URL of the external Wiki",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "external_wiki_url"
+            ]
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "issue_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "description": "The title of an issue",
+                    "type": "string"
+                },
+                "updated_at": {
+                    "description": "Date time when the issue was updated. Available only for admins and project owners.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "state_event": {
+                    "description": "State of the issue",
+                    "type": "string",
+                    "enum": [
+                        "reopen",
+                        "close"
+                    ]
+                },
+                "description": {
+                    "description": "The description of an issue",
+                    "type": "string"
+                },
+                "assignee_id": {
+                    "description": "The ID of a user to assign issue",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "milestone_id": {
+                    "description": "The ID of a milestone to assign issue",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "labels": {
+                    "description": "Comma-separated list of label names",
+                    "type": "string"
+                },
+                "due_date": {
+                    "description": "Date time string in the format YEAR-MONTH-DAY",
+                    "type": "string"
+                },
+                "confidential": {
+                    "description": "Boolean parameter if the issue should be confidential",
+                    "type": "boolean"
+                },
+                "created_at": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

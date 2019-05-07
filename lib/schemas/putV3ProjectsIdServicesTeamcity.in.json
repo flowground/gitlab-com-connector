@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "teamcity_url": {
+                    "description": "TeamCity root URL like https://teamcity.example.com",
+                    "type": "string"
+                },
+                "build_type": {
+                    "description": "Build configuration ID",
+                    "type": "string"
+                },
+                "username": {
+                    "description": "A user with permissions to trigger a manual build",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "The password of the user",
+                    "type": "string"
+                },
+                "push_events": {
+                    "description": "Event will be triggered by a push to the repository",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "teamcity_url"
+            ]
+        }
+    }
+}

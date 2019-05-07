@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "merge_request_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "version_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

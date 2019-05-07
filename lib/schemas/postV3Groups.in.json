@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the group",
+                    "type": "string"
+                },
+                "path": {
+                    "description": "The path of the group",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The description of the group",
+                    "type": "string"
+                },
+                "visibility_level": {
+                    "description": "The visibility level of the group",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "lfs_enabled": {
+                    "description": "Enable/disable LFS for the projects in this group",
+                    "type": "boolean"
+                },
+                "request_access_enabled": {
+                    "description": "Allow users to request member access",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        }
+    }
+}

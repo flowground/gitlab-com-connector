@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "forked_from_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

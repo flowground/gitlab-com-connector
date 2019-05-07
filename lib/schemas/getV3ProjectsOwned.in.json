@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "order_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "id",
+                "name",
+                "path",
+                "created_at",
+                "updated_at",
+                "last_activity_at"
+            ],
+            "default": "created_at"
+        },
+        "sort": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "asc",
+                "desc"
+            ],
+            "default": "desc"
+        },
+        "archived": {
+            "required": false,
+            "type": "boolean"
+        },
+        "visibility": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "public",
+                "internal",
+                "private"
+            ]
+        },
+        "search": {
+            "required": false,
+            "type": "string"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "simple": {
+            "required": false,
+            "type": "boolean"
+        },
+        "statistics": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

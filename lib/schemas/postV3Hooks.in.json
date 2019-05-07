@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "description": "The URL to send the request to",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "The token used to validate payloads",
+                    "type": "string"
+                },
+                "push_events": {
+                    "description": "Trigger hook on push events",
+                    "type": "boolean"
+                },
+                "tag_push_events": {
+                    "description": "Trigger hook on tag push events",
+                    "type": "boolean"
+                },
+                "enable_ssl_verification": {
+                    "description": "Do SSL verification when triggering the hook",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "url"
+            ]
+        }
+    }
+}

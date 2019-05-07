@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "environment_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The new environment name",
+                    "type": "string"
+                },
+                "external_url": {
+                    "description": "The new URL on which this deployment is viewable",
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

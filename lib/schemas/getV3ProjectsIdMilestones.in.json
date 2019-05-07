@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "state": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "active",
+                "closed",
+                "all"
+            ],
+            "default": "all"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "iid": {
+                    "description": "The IID of the milestone",
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}

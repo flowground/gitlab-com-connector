@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "bamboo_url": {
+                    "description": "Bamboo root URL like https://bamboo.example.com",
+                    "type": "string"
+                },
+                "build_key": {
+                    "description": "Bamboo build plan key like",
+                    "type": "string"
+                },
+                "username": {
+                    "description": "A user with API access, if applicable",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "Passord of the user",
+                    "type": "string"
+                },
+                "push_events": {
+                    "description": "Event will be triggered by a push to the repository",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "bamboo_url"
+            ]
+        }
+    }
+}

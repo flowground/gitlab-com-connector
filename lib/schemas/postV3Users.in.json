@@ -1,0 +1,86 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "description": "The email of the user",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "The password of the new user",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "The name of the user",
+                    "type": "string"
+                },
+                "username": {
+                    "description": "The username of the user",
+                    "type": "string"
+                },
+                "skype": {
+                    "description": "The Skype username",
+                    "type": "string"
+                },
+                "linkedin": {
+                    "description": "The LinkedIn username",
+                    "type": "string"
+                },
+                "twitter": {
+                    "description": "The Twitter username",
+                    "type": "string"
+                },
+                "website_url": {
+                    "description": "The website of the user",
+                    "type": "string"
+                },
+                "organization": {
+                    "description": "The organization of the user",
+                    "type": "string"
+                },
+                "projects_limit": {
+                    "description": "The number of projects a user can create",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "extern_uid": {
+                    "description": "The external authentication provider UID",
+                    "type": "string"
+                },
+                "provider": {
+                    "description": "The external provider",
+                    "type": "string"
+                },
+                "bio": {
+                    "description": "The biography of the user",
+                    "type": "string"
+                },
+                "location": {
+                    "description": "The location of the user",
+                    "type": "string"
+                },
+                "admin": {
+                    "description": "Flag indicating the user is an administrator",
+                    "type": "boolean"
+                },
+                "can_create_group": {
+                    "description": "Flag indicating the user can create groups",
+                    "type": "boolean"
+                },
+                "confirm": {
+                    "description": "Flag indicating the account needs to be confirmed",
+                    "type": "boolean"
+                },
+                "external": {
+                    "description": "Flag indicating the user is an external user",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "email"
+            ]
+        }
+    }
+}

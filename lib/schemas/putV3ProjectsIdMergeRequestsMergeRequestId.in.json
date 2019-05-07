@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "merge_request_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "description": "The title of the merge request",
+                    "type": "string"
+                },
+                "target_branch": {
+                    "description": "The target branch",
+                    "type": "string"
+                },
+                "state_event": {
+                    "description": "Status of the merge request",
+                    "type": "string",
+                    "enum": [
+                        "close",
+                        "reopen",
+                        "merge"
+                    ]
+                },
+                "description": {
+                    "description": "The description of the merge request",
+                    "type": "string"
+                },
+                "assignee_id": {
+                    "description": "The ID of a user to assign the merge request",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "milestone_id": {
+                    "description": "The ID of a milestone to assign the merge request",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "labels": {
+                    "description": "Comma-separated list of label names",
+                    "type": "string"
+                },
+                "remove_source_branch": {
+                    "description": "Remove source branch when merging",
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

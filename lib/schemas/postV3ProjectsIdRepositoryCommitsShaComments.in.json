@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "sha": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "note": {
+                    "description": "The text of the comment",
+                    "type": "string"
+                },
+                "path": {
+                    "description": "The file path",
+                    "type": "string"
+                },
+                "line": {
+                    "description": "The line number",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "line_type": {
+                    "description": "The type of the line",
+                    "type": "string",
+                    "enum": [
+                        "new",
+                        "old"
+                    ],
+                    "default": "new"
+                }
+            },
+            "required": [
+                "note"
+            ]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "description": "Content of .gitlab-ci.yml",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "content"
+            ]
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "description": "The user ID of the new member",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "access_level": {
+                    "description": "A valid access level (defaults: `30`, developer access level)",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "expires_at": {
+                    "description": "Date string in the format YEAR-MONTH-DAY",
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "required": [
+                "user_id"
+            ]
+        }
+    }
+}

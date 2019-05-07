@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "recipients": {
+                    "description": "Comma-separated list of recipient email addresses",
+                    "type": "string"
+                },
+                "notify_only_broken_builds": {
+                    "description": "Notify only broken builds",
+                    "type": "boolean"
+                },
+                "pipeline_events": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "recipients"
+            ]
+        }
+    }
+}

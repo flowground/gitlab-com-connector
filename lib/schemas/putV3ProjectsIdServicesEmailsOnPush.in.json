@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "recipients": {
+                    "description": "Comma-separated list of recipient email addresses",
+                    "type": "string"
+                },
+                "disable_diffs": {
+                    "description": "Disable code diffs",
+                    "type": "boolean"
+                },
+                "send_from_committer_email": {
+                    "description": "Send from committer",
+                    "type": "boolean"
+                },
+                "push_events": {
+                    "description": "Event will be triggered by a push to the repository",
+                    "type": "string"
+                },
+                "tag_push_events": {
+                    "description": "Event will be triggered when a new tag is pushed to the repository",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "recipients"
+            ]
+        }
+    }
+}

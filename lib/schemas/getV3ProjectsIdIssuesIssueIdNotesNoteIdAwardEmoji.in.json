@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "issue_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "note_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

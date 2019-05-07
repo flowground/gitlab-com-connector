@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "login": {
+                    "description": "The username",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "The email of the user",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "The password of the user",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
